@@ -33,5 +33,12 @@ public class hiloro extends Thread{
             Logger.getLogger(Hilov.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    }
+
+    public void debloqr(){    
+        synchronized(this){
+        notify();
+        
+        }
     }    
 }

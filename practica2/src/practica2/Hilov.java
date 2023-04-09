@@ -6,7 +6,8 @@ package practica2;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+//import practica2.hiloro;
+//import practica2.ventana;
 /**
  *
  * @author Pedro
@@ -14,10 +15,11 @@ import java.util.logging.Logger;
 public class Hilov extends Thread{
 
     private int vprodu;
-    private int contv;
+    private int contv,inicio2;
     
        public void setDato1(int vprodu){
        this.vprodu=vprodu;      
+       
         }
 //       public int getcontv(){
 //       return contv;      
@@ -35,7 +37,11 @@ public class Hilov extends Thread{
                 for (int x = 0; x < 30; x++) {
                 System.out.println(vprodu*1000);
                 this.sleep(vprodu*1000);
-//                System.out.println("funcionaaa"); 
+
+                obtenerini2();
+                    if (inicio2==1) {
+                        
+                    }                
                 contv=contv+1;
                 mostrarlabelsv();              
             }     
@@ -57,6 +63,10 @@ public class Hilov extends Thread{
 //     contv=contv+1;
      v.obtenercon(contv);
      v.mostrar2();
+    }
+    public void obtenerini2(){
+       ventana v = new ventana();
+       v.obtenerinir(inicio2);
     }
 }
 
